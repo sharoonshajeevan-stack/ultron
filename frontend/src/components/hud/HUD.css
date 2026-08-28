@@ -1,0 +1,407 @@
+/* src/components/hud/HUD.css */
+
+/* =========================================================
+   ULTRON HUD — FINAL CINEMATIC FRAME
+   ========================================================= */
+
+.ultron-hud,
+.hud {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  color: #ffffff;
+
+  font-family:
+    "Courier New",
+    "Roboto Mono",
+    monospace;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   CINEMATIC ATMOSPHERE
+   ========================================================= */
+
+.ultron-hud::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 191, 255, 0.025) 0%,
+      rgba(0, 191, 255, 0.008) 28%,
+      transparent 62%
+    );
+
+  opacity: 0.9;
+}
+
+/* Very subtle screen edge darkening */
+
+.ultron-hud::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 48%,
+      rgba(0, 0, 0, 0.18) 78%,
+      rgba(0, 0, 0, 0.42) 100%
+    );
+}
+
+/* =========================================================
+   CORNER FRAME
+   ========================================================= */
+
+.hud-corner {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  font-family:
+    "Courier New",
+    "Roboto Mono",
+    monospace;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  opacity: 0.92;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* =========================================================
+   CORNER TEXT
+   ========================================================= */
+
+.hud-corner span {
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  line-height: 1.2;
+
+  color:
+    rgba(235, 250, 255, 0.78);
+
+  text-shadow:
+    0 0 8px
+      rgba(0, 191, 255, 0.18);
+}
+
+.hud-corner small {
+  font-size: 7px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  line-height: 1.2;
+
+  color:
+    rgba(210, 235, 245, 0.34);
+}
+
+/* =========================================================
+   TOP LEFT
+   ========================================================= */
+
+.hud-top-left {
+  top: 32px;
+  left: 32px;
+
+  align-items: flex-start;
+
+  padding-left: 1px;
+}
+
+/* =========================================================
+   TOP RIGHT
+   ========================================================= */
+
+.hud-top-right {
+  top: 32px;
+  right: 32px;
+
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+/* =========================================================
+   BOTTOM LEFT
+   ========================================================= */
+
+.hud-bottom-left {
+  left: 32px;
+  bottom: 32px;
+
+  align-items: flex-start;
+}
+
+/* =========================================================
+   BOTTOM RIGHT
+   ========================================================= */
+
+.hud-bottom-right {
+  right: 32px;
+  bottom: 32px;
+
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+/* =========================================================
+   HUD LINES
+   ========================================================= */
+
+.hud-line {
+  width: 42px;
+  height: 1px;
+
+  margin-bottom: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 191, 255, 0.65),
+      rgba(0, 191, 255, 0.08)
+    );
+
+  box-shadow:
+    0 0 6px
+      rgba(0, 191, 255, 0.28);
+}
+
+/* Right-side line */
+
+.hud-top-right .hud-line {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 191, 255, 0.08),
+      rgba(0, 191, 255, 0.65)
+    );
+}
+
+/* =========================================================
+   SUBTLE CORNER MARKERS
+   ========================================================= */
+
+.hud-top-left::before,
+.hud-top-right::before,
+.hud-bottom-left::before,
+.hud-bottom-right::before {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  opacity: 0.5;
+
+  pointer-events: none;
+}
+
+/* Top-left marker */
+
+.hud-top-left::before {
+  top: -7px;
+  left: -7px;
+
+  border-top:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+
+  border-left:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+}
+
+/* Top-right marker */
+
+.hud-top-right::before {
+  top: -7px;
+  right: -7px;
+
+  border-top:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+
+  border-right:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+}
+
+/* Bottom-left marker */
+
+.hud-bottom-left::before {
+  bottom: -7px;
+  left: -7px;
+
+  border-bottom:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+
+  border-left:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+}
+
+/* Bottom-right marker */
+
+.hud-bottom-right::before {
+  bottom: -7px;
+  right: -7px;
+
+  border-bottom:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+
+  border-right:
+    1px solid
+    rgba(0, 191, 255, 0.45);
+}
+
+/* =========================================================
+   ONLINE / ACTIVE STATES
+   ========================================================= */
+
+.hud-top-right span {
+  color:
+    rgba(190, 245, 255, 0.82);
+
+  text-shadow:
+    0 0 7px
+      rgba(0, 191, 255, 0.25);
+}
+
+.hud-bottom-left span {
+  color:
+    rgba(190, 245, 255, 0.78);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .hud-top-left {
+    top: 18px;
+    left: 18px;
+  }
+
+  .hud-top-right {
+    top: 18px;
+    right: 18px;
+  }
+
+  .hud-bottom-left {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .hud-bottom-right {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .hud-corner span {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .hud-corner small {
+    font-size: 6px;
+    letter-spacing: 1.5px;
+  }
+
+  .hud-line {
+    width: 34px;
+  }
+
+  .hud-top-left::before,
+  .hud-top-right::before,
+  .hud-bottom-left::before,
+  .hud-bottom-right::before {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .hud-top-left {
+    top: 14px;
+    left: 14px;
+  }
+
+  .hud-top-right {
+    top: 14px;
+    right: 14px;
+  }
+
+  .hud-bottom-left {
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .hud-bottom-right {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .hud-corner span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .hud-corner small {
+    font-size: 5px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-corner {
+    transition: none;
+  }
+}

@@ -1,0 +1,40 @@
+/* NEW FILE */
+/* src/components/hud/SystemClock.css */
+
+.system-clock {
+  position: fixed;
+
+  top: 32px;
+  right: 32px;
+
+  z-index: 9995;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  font-family: monospace;
+
+  pointer-events: none;
+}
+
+.system-clock-label {
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.system-clock-time {
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.15);
+}

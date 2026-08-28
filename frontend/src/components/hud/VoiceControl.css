@@ -1,0 +1,239 @@
+/* src/components/hud/VoiceControl.css */
+
+/* =========================================================
+   ULTRON VOICE CONTROL — FINAL
+   ========================================================= */
+
+.voice-control {
+  position: fixed;
+
+  right: 32px;
+  bottom: 32px;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-family:
+    "Courier New",
+    "Roboto Mono",
+    monospace;
+
+  pointer-events: auto;
+}
+
+/* =========================================================
+   SHARED BUTTON
+   ========================================================= */
+
+.voice-button,
+.voice-power {
+  border: 1px solid
+    rgba(0, 191, 255, 0.22);
+
+  background:
+    rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* =========================================================
+   MIC BUTTON
+   ========================================================= */
+
+.voice-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 13px;
+
+  border-radius: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.5);
+}
+
+.voice-button:hover {
+  border-color:
+    rgba(0, 191, 255, 0.6);
+
+  background:
+    rgba(0, 191, 255, 0.08);
+
+  color: #00bfff;
+
+  box-shadow:
+    0 0 12px
+    rgba(0, 191, 255, 0.08);
+}
+
+/* =========================================================
+   MIC LABEL
+   ========================================================= */
+
+.voice-button-main {
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+.voice-control-label {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   LISTENING
+   ========================================================= */
+
+.voice-button.listening {
+  color: #00bfff;
+
+  border-color:
+    rgba(0, 191, 255, 0.7);
+
+  background:
+    rgba(0, 191, 255, 0.1);
+
+  box-shadow:
+    0 0 14px
+    rgba(0, 191, 255, 0.15);
+}
+
+.voice-button.listening
+.voice-button-main {
+  text-shadow:
+    0 0 7px
+    rgba(0, 191, 255, 0.6);
+}
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.voice-button.disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.voice-button:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   POWER BUTTON
+   ========================================================= */
+
+.voice-power {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border-radius: 50%;
+}
+
+.voice-power span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.3);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* =========================================================
+   POWER ENABLED
+   ========================================================= */
+
+.voice-power.enabled {
+  border-color:
+    rgba(0, 191, 255, 0.45);
+}
+
+.voice-power.enabled span {
+  background: #00bfff;
+
+  box-shadow:
+    0 0 8px #00bfff,
+    0 0 14px
+    rgba(0, 191, 255, 0.3);
+}
+
+/* =========================================================
+   POWER HOVER
+   ========================================================= */
+
+.voice-power:hover {
+  border-color:
+    rgba(0, 191, 255, 0.75);
+
+  background:
+    rgba(0, 191, 255, 0.08);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .voice-control {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .voice-button {
+    padding: 8px 10px;
+  }
+
+  .voice-control-label {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .voice-power {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-button,
+  .voice-power {
+    transition: none;
+  }
+}

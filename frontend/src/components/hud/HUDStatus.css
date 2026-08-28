@@ -1,0 +1,219 @@
+/* src/components/hud/HUDStatus.css */
+
+/* =========================================================
+   ULTRON HUD STATUS — FINAL
+   ========================================================= */
+
+.hud-status {
+  position: fixed;
+
+  left: 50%;
+  bottom: 105px;
+
+  transform: translateX(-50%);
+
+  z-index: 40;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  font-family:
+    "Courier New",
+    "Roboto Mono",
+    monospace;
+
+  pointer-events: none;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* =========================================================
+   MAIN STATUS
+   ========================================================= */
+
+.hud-status {
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  line-height: 1.2;
+
+  color:
+    rgba(235, 250, 255, 0.72);
+
+  text-shadow:
+    0 0 8px
+    rgba(0, 191, 255, 0.12);
+}
+
+/* =========================================================
+   SECONDARY MESSAGE
+   ========================================================= */
+
+.hud-status-message {
+  margin-top: 6px;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  letter-spacing: 1.8px;
+
+  line-height: 1.3;
+
+  color:
+    rgba(210, 235, 245, 0.32);
+
+  text-shadow: none;
+
+  transition:
+    color 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* =========================================================
+   IDLE
+   ========================================================= */
+
+.hud-status-idle {
+  opacity: 0.72;
+}
+
+.hud-status-idle
+.hud-status-message {
+  color:
+    rgba(210, 235, 245, 0.28);
+}
+
+/* =========================================================
+   LISTENING
+   ========================================================= */
+
+.hud-status-listening {
+  opacity: 1;
+}
+
+.hud-status-listening {
+  color: #00bfff;
+
+  text-shadow:
+    0 0 8px
+    rgba(0, 191, 255, 0.35),
+    0 0 18px
+    rgba(0, 191, 255, 0.12);
+}
+
+.hud-status-listening
+.hud-status-message {
+  color:
+    rgba(130, 220, 255, 0.55);
+}
+
+/* =========================================================
+   THINKING
+   ========================================================= */
+
+.hud-status-thinking {
+  opacity: 1;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 9px
+    rgba(255, 255, 255, 0.4),
+    0 0 20px
+    rgba(255, 255, 255, 0.12);
+}
+
+.hud-status-thinking
+.hud-status-message {
+  color:
+    rgba(235, 240, 245, 0.52);
+}
+
+/* =========================================================
+   RESPONDING
+   ========================================================= */
+
+.hud-status-responding {
+  opacity: 1;
+
+  color: #ff8a00;
+
+  text-shadow:
+    0 0 9px
+    rgba(255, 138, 0, 0.45),
+    0 0 20px
+    rgba(255, 138, 0, 0.12);
+}
+
+.hud-status-responding
+.hud-status-message {
+  color:
+    rgba(255, 190, 120, 0.55);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .hud-status {
+    bottom: 82px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .hud-status-message {
+    margin-top: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.4px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .hud-status {
+    bottom: 72px;
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .hud-status-message {
+    font-size: 6px;
+
+    letter-spacing: 1.2px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-status {
+    transition: none;
+  }
+
+  .hud-status-message {
+    transition: none;
+  }
+}

@@ -1,0 +1,105 @@
+/* src/index.css */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: monospace;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.ultron-app {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0, 35, 55, 0.18),
+      rgba(0, 0, 0, 0.98) 65%
+    ),
+    #000000;
+}
+
+/* =========================
+   THREE.JS CANVAS
+   ========================= */
+
+.core-canvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.core-canvas canvas {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* =========================
+   HUD
+   ========================= */
+
+.hud-layer {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+.hud-layer button,
+.hud-layer input,
+.hud-layer textarea,
+.hud-layer [role="button"] {
+  pointer-events: auto;
+}
+
+/* =========================
+   REMOVE DEFAULT SPACING
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}

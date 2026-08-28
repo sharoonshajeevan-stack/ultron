@@ -1,0 +1,63 @@
+/* NEW FILE */
+/* src/components/hud/ConnectionStatus.css */
+
+.connection-status {
+  position: fixed;
+
+  top: 58px;
+  right: 32px;
+
+  z-index: 9995;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-family: monospace;
+
+  pointer-events: none;
+
+  opacity: 0.55;
+}
+
+.connection-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.connection-text {
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  transition: color 0.3s ease;
+}
+
+.connection-status.online .connection-dot {
+  background: #00bfff;
+
+  box-shadow:
+    0 0 7px rgba(0, 191, 255, 0.8);
+}
+
+.connection-status.online .connection-text {
+  color: rgba(0, 191, 255, 0.65);
+}
+
+.connection-status.offline .connection-dot {
+  background: #ff8a00;
+
+  box-shadow:
+    0 0 7px rgba(255, 138, 0, 0.8);
+}
+
+.connection-status.offline .connection-text {
+  color: rgba(255, 138, 0, 0.65);
+}

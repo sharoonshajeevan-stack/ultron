@@ -1,0 +1,138 @@
+/* src/components/hud/ThinkingIndicator.css */
+
+/* =========================================================
+   ULTRON THINKING INDICATOR — FINAL
+   ========================================================= */
+
+.thinking-indicator {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 9996;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-family:
+    "Courier New",
+    "Roboto Mono",
+    monospace;
+
+  pointer-events: none;
+
+  animation:
+    thinkingAppear 0.25s ease;
+}
+
+/* =========================================================
+   THINKING DOT
+   ========================================================= */
+
+.thinking-dot {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 7px
+    rgba(255, 255, 255, 0.85),
+    0 0 14px
+    rgba(255, 255, 255, 0.25);
+
+  animation:
+    thinkingPulse 0.9s ease-in-out infinite;
+}
+
+/* =========================================================
+   THINKING TEXT
+   ========================================================= */
+
+.thinking-text {
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  text-shadow:
+    0 0 8px
+    rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes thinkingPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+
+    transform:
+      scale(0.75);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.25);
+  }
+}
+
+@keyframes thinkingAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .thinking-indicator {
+    gap: 8px;
+  }
+
+  .thinking-dot {
+    width: 4px;
+    height: 4px;
+  }
+
+  .thinking-text {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .thinking-indicator {
+    animation: none;
+  }
+
+  .thinking-dot {
+    animation: none;
+  }
+}

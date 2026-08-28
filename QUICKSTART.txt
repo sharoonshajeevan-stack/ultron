@@ -1,0 +1,155 @@
+════════════════════════════════════════════════════════════════
+   🤖 ULTRON OS - QUICK START GUIDE
+════════════════════════════════════════════════════════════════
+
+⏱️  TAKES 3 MINUTES TO START
+
+════════════════════════════════════════════════════════════════
+STEP 1: OPEN 3 TERMINALS
+════════════════════════════════════════════════════════════════
+
+Terminal 1 - START OLLAMA (AI Engine)
+───────────────────────────────────────
+Command:
+  ollama serve
+
+Wait for:
+  listening on 127.0.0.1:11434
+
+✅ Keep this running!
+
+────────────────────────────────────────────────────────────────
+
+Terminal 2 - START PYTHON BACKEND (API Server)
+───────────────────────────────────────────────
+Command:
+  cd D:\ULTRON-OS\backend
+  python main.py
+
+Wait for:
+  Running on http://127.0.0.1:5000
+
+✅ Keep this running!
+
+────────────────────────────────────────────────────────────────
+
+Terminal 3 - START REACT FRONTEND (UI)
+───────────────────────────────────────
+Command:
+  cd D:\ULTRON-OS\frontend
+  npm run dev
+
+Wait for:
+  Local: http://localhost:5173/
+
+✅ Keep this running!
+
+════════════════════════════════════════════════════════════════
+STEP 2: OPEN BROWSER
+════════════════════════════════════════════════════════════════
+
+Go to: http://localhost:5173/
+
+🎉 ULTRON OS IS RUNNING!
+
+════════════════════════════════════════════════════════════════
+QUICK TESTS
+════════════════════════════════════════════════════════════════
+
+Test 1: AI Console (right side)
+  Type: "hello"
+  Click: "Send Test"
+  Expected: Response appears
+
+Test 2: Wake Word (top-right)
+  Click: "Start Listening"
+  Wait for status to say "Listening for Ultron"
+  Click: "Test Detection"
+  Expected: Shows "ULTRON DETECTED!"
+
+Test 3: System Commands (center)
+  Click: "Google" button
+  Expected: Browser opens Google
+
+Test 4: Speech-to-Text (left side)
+  Click: "Start Recording"
+  Say: "Hello world"
+  Click: "Stop Recording"
+  Expected: Shows transcript
+
+════════════════════════════════════════════════════════════════
+FEATURES TO TRY
+════════════════════════════════════════════════════════════════
+
+🎤 Voice Input
+  - Microphone records your voice
+  - Converts to text
+  - AI understands commands
+
+🤖 AI Response
+  - Uses offline Mistral model
+  - Provides intelligent responses
+  - No internet needed
+
+🔊 Voice Output
+  - AI speaks responses back to you
+  - Customizable speed and volume
+  - Natural-sounding voice
+
+🖥️  System Control
+  - Launch applications
+  - Open websites
+  - Shutdown/restart PC
+  - View system info
+
+💾 Memory
+  - Remembers conversations
+  - Learns from history
+  - Provides context
+
+════════════════════════════════════════════════════════════════
+SHUTDOWN
+════════════════════════════════════════════════════════════════
+
+Press Ctrl+C in each terminal to stop:
+  Terminal 1: Stop Ollama
+  Terminal 2: Stop Python
+  Terminal 3: Stop React
+
+Close browser window
+
+Done! 🎉
+
+════════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+════════════════════════════════════════════════════════════════
+
+Problem: "Port already in use"
+Solution: 
+  - Close existing instances
+  - Or restart Windows
+
+Problem: "Ollama connection failed"
+Solution:
+  - Make sure Terminal 1 is running
+  - Check Ollama is installed
+
+Problem: "No audio from microphone"
+Solution:
+  - Check Windows sound settings
+  - Ensure microphone is default device
+
+Problem: "Slow responses"
+Solution:
+  - First run of AI is slower
+  - Subsequent responses faster
+  - Normal behavior!
+
+════════════════════════════════════════════════════════════════
+
+For detailed setup, see: SETUP.md
+For full documentation, see: README.md
+
+Questions? Check the documentation files!
+
+🚀 WELCOME TO ULTRON OS!

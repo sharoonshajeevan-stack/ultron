@@ -1,0 +1,57 @@
+/* src/components/controls/AIStateControls.css */
+
+.ai-state-controls {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 8px;
+
+  padding: 8px;
+
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(0, 191, 255, 0.25);
+  border-radius: 10px;
+
+  backdrop-filter: blur(12px);
+}
+
+.ai-state-button {
+  min-width: 90px;
+  padding: 8px 12px;
+
+  background: transparent;
+  color: rgba(255, 255, 255, 0.45);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ai-state-button:hover {
+  color: #00bfff;
+  background: rgba(0, 191, 255, 0.08);
+  border-color: rgba(0, 191, 255, 0.45);
+}
+
+.ai-state-button.active {
+  color: #00bfff;
+  background: rgba(0, 191, 255, 0.15);
+  border-color: rgba(0, 191, 255, 0.65);
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.18);
+}

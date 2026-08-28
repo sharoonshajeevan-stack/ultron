@@ -1,0 +1,125 @@
+/* NEW FILE
+   src/components/hud/WakeWordIndicator.css
+*/
+
+.wake-word-indicator {
+  position: fixed;
+
+  left: 50%;
+  top: 46%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 9996;
+
+  pointer-events: none;
+
+  animation: wakeAppear 0.3s ease;
+}
+
+.wake-word-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  border: 1px solid rgba(0, 191, 255, 0.6);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 20px rgba(0, 191, 255, 0.2);
+}
+
+.wake-word-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #00bfff;
+
+  box-shadow:
+    0 0 8px #00bfff,
+    0 0 18px rgba(0, 191, 255, 0.7);
+
+  animation: wakePulse 0.8s ease-in-out infinite;
+}
+
+.wake-word-text {
+  font-family: monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  color: #ffffff;
+}
+
+.wake-word-status {
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #00bfff;
+}
+
+.wake-word-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 150px;
+  height: 150px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(0, 191, 255, 0.25);
+
+  border-radius: 50%;
+
+  animation: ringExpand 1.2s ease-out infinite;
+}
+
+@keyframes wakeAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes wakePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes ringExpand {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}

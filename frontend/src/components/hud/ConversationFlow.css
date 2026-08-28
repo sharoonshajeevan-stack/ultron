@@ -1,0 +1,77 @@
+/* NEW FILE */
+/* src/components/hud/ConversationFlow.css */
+
+.conversation-flow {
+  position: fixed;
+
+  left: 50%;
+  top: 60%;
+
+  transform: translateX(-50%);
+
+  width: min(620px, 78vw);
+
+  z-index: 9994;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  pointer-events: none;
+
+  font-family: monospace;
+}
+
+.conversation-command,
+.conversation-response {
+  padding: 10px 14px;
+
+  background: rgba(0, 0, 0, 0.42);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 7px;
+
+  backdrop-filter: blur(10px);
+}
+
+.conversation-command {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 10px;
+}
+
+.conversation-command span {
+  color: #00bfff;
+}
+
+.conversation-command p,
+.conversation-response p {
+  margin: 0;
+
+  line-height: 1.6;
+}
+
+.conversation-response {
+  border-color: rgba(255, 138, 0, 0.2);
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 11px;
+}
+
+.conversation-response-label {
+  margin-bottom: 6px;
+
+  color: #ff8a00;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+}

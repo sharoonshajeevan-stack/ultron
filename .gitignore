@@ -1,0 +1,61 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Audio
+*.wav
+*.mp3
+*.ogg
+
+# Generated screenshots
+screenshots/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local AI/model data
+.ollama/
+
+# Backups
+*-BACKUP/
+backup/
+backups/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

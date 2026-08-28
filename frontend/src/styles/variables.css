@@ -1,0 +1,32 @@
+:root{
+
+    --bg:#050608;
+
+    --panel:rgba(10,18,30,.38);
+
+    --panel-border:rgba(120,180,255,.15);
+
+    --primary:#36A8FF;
+
+    --primary-light:#74C7FF;
+
+    --text:#E8F6FF;
+
+    --muted:#7E9BB4;
+
+    --success:#4DFF91;
+
+    --warning:#FFC857;
+
+    --danger:#FF5C70;
+
+    --radius:18px;
+
+    --blur:18px;
+
+    --transition:.35s ease;
+
+    --shadow:
+        0 0 40px rgba(54,168,255,.12);
+
+}

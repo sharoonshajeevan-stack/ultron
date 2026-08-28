@@ -1,0 +1,75 @@
+.panel {
+    position: relative;
+
+    width: 100%;
+    min-height: 260px;
+
+    padding: 28px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18,32,58,.34),
+            rgba(5,10,18,.18)
+        );
+
+    backdrop-filter: blur(28px);
+
+    border: 1px solid rgba(90,185,255,.18);
+
+    animation:
+        fadeUp .8s,
+        floatPanel 8s ease-in-out infinite,
+        borderGlow 4s ease-in-out infinite;
+
+    transition: .35s;
+}
+
+.panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.10),
+            transparent
+        );
+
+    animation: shimmer 6s linear infinite;
+}
+
+.panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(120,220,255,.05);
+
+    pointer-events: none;
+}
+
+.panel:hover {
+
+    border-color: #69D2FF;
+
+    transform: scale(1.015);
+}

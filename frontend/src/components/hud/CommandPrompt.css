@@ -1,0 +1,122 @@
+/* src/components/hud/CommandPrompt.css */
+
+.command-prompt {
+  position: fixed;
+
+  left: 50%;
+  bottom: 150px;
+
+  transform: translateX(-50%);
+
+  width: min(560px, 80vw);
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 12px;
+
+  z-index: 9999;
+
+  pointer-events: auto;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  border: 1px solid rgba(0, 191, 255, 0.35);
+
+  border-radius: 8px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 20px rgba(0, 191, 255, 0.08);
+}
+
+.command-prefix {
+  flex-shrink: 0;
+
+  margin-right: 10px;
+
+  color: #00bfff;
+
+  font-family: monospace;
+
+  font-size: 14px;
+}
+
+.command-prompt input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 5px 0;
+
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  color: #ffffff;
+
+  font-family: monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  pointer-events: auto;
+
+  user-select: text;
+}
+
+.command-prompt input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.command-prompt button {
+  flex-shrink: 0;
+
+  margin-left: 10px;
+
+  padding: 7px 12px;
+
+  background: transparent;
+
+  border: 1px solid rgba(0, 191, 255, 0.35);
+
+  border-radius: 5px;
+
+  color: #00bfff;
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.command-prompt button:hover {
+  background: rgba(0, 191, 255, 0.12);
+
+  border-color: rgba(0, 191, 255, 0.7);
+}
+
+@media (max-width: 700px) {
+  .command-prompt {
+    bottom: 125px;
+
+    width: 86vw;
+  }
+
+  .command-prompt button {
+    display: none;
+  }
+}
